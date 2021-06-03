@@ -1,0 +1,21 @@
+mutation(
+    $name:String!
+    $email:String!
+    $password:String
+    $employee:Int
+    $id:ID!
+    $roles:[String!]!
+) {
+ updateUser(input:{
+  name:$name,
+  email:$email,
+  employee:$employee
+  password:$password,
+  id:$id
+  roles:$roles
+}){
+  name
+  email
+  created_at
+}
+}

@@ -1,0 +1,25 @@
+mutation(
+  $name: String!
+  $email: String!
+  $employee: Int
+  $password: String!
+  $password_confirmation: String!
+  $roles:[String!]!
+
+) {
+  createUser(
+    input: {
+      name: $name
+      email: $email
+      employee: $employee
+      password: $password
+      password_confirmation: $password_confirmation
+      roles: $roles
+    }
+  ) {
+    id,
+    name,
+    email,
+    created_at
+  }
+}

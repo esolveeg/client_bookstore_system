@@ -1,0 +1,28 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    height: 100%;
+    flex-direction: column;
+    & img{
+      width:70%;
+      height: auto;
+    }
+    & h1{
+      color:var(--text-color);
+      font-weight: 400;
+      font-size: 8rem;
+    }
+    & h6{
+      color:var(--text-color);
+      font-weight: 400;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 2%;
+    }
+    & .btn{
+      box-shadow: 0 6px 20px 0 rgba(25, 118, 210, .5) !important;
+      background: linear-gradient(45deg, #6200ea, #1976d2) !important;
+    }
+  }

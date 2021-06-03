@@ -1,0 +1,11 @@
+query {
+  me {
+    name
+    email
+    roles {
+      permissions {
+        slug
+      }
+    }
+  }
+}

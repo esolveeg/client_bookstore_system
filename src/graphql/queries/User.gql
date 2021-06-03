@@ -1,0 +1,15 @@
+query($id:ID!) {
+  user(id:$id) {
+    name
+    email
+    roles {
+      slug
+      id
+      name
+    }
+    employee{
+      id
+      name
+    }
+  }
+}

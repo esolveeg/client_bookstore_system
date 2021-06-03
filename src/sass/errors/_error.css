@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  height: 100%;
+  flex-direction: column;
+}
+
+.wrapper img {
+  width: 70%;
+  height: auto;
+}
+
+.wrapper h1 {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 8rem;
+}
+
+.wrapper h6 {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2%;
+}
+
+.wrapper .btn {
+  box-shadow: 0 6px 20px 0 rgba(25, 118, 210, 0.5) !important;
+  background: linear-gradient(45deg, #6200ea, #1976d2) !important;
+}

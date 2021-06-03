@@ -1,0 +1,13 @@
+query($id: ID!, $branch: ID) {
+  product(id: $id, branch: $branch) {
+    id
+    isbn
+    name
+    purchased_price
+    price
+    qty
+    orders {
+      id
+    }
+  }
+}
