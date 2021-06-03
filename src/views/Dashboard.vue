@@ -103,6 +103,7 @@ export default {
   },
   data() {
     return {
+      url : "http://systemapi.esolve-eg.com/public",
       bestsellerData: {
         type: "polarArea",
         data: {
@@ -170,7 +171,7 @@ export default {
     getRevenueData() {
       if (this.isPos == false) {
         axios
-          .get("http://35.242.186.11/readerscorner/api_bookstore_system/public/chart", {}, {})
+          .get(`${this.url}/chart`, {}, {})
           .then(response => {
             let data = response.data;
             let datasets = [];
@@ -193,7 +194,7 @@ export default {
           this.allBranches.forEach(branch => {
             axios
               .get(
-                `http://35.242.186.11/readerscorner/api_bookstore_system/public/chart/${branch.id}`,
+                `${this.url}/chart/${branch.id}`,
                 {},
                 {}
               )
@@ -217,7 +218,7 @@ export default {
       } else {
         axios
           .get(
-            `http://35.242.186.11/readerscorner/api_bookstore_system/public/chart/${this.branch}`,
+            `${this.url}/chart/${this.branch}`,
             {},
             {}
           )
@@ -241,7 +242,7 @@ export default {
     },
     getBranchRevenueData(branch) {
       axios
-        .get(`http://35.242.186.11/readerscorner/api_bookstore_system/public/chart/${branch.id}`, {}, {})
+        .get(`${this.url}/chart/${branch.id}`, {}, {})
         .then(response => {
           let data = response.data;
           let datasets = [];
@@ -261,7 +262,7 @@ export default {
     },
     getBestsellerData() {
       axios
-        .get("http://35.242.186.11/readerscorner/api_bookstore_system/public/bestseller", {}, {})
+        .get(`${this.url}/bestseller`, {}, {})
         .then(response => {
           let data = response.data;
           let datasets = [
@@ -288,7 +289,7 @@ export default {
     },
     getExpensesData() {
       axios
-        .get("http://35.242.186.11/readerscorner/api_bookstore_system/public/expenses", {}, {})
+        .get(`${this.url}/expenses`, {}, {})
         .then(response => {
           let data = response.data;
           let datasets = [

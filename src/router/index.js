@@ -476,8 +476,8 @@ router.beforeEach((to, from, next) => {
           }
         })
         .catch(() => {
-          localStorage.removeItem("apollo-token");
-          next({ name: "login" });
+          // localStorage.removeItem("apollo-token");
+          // next({ name: "login" });
         });
     } else {
       next({ name: "login" });
